@@ -149,13 +149,13 @@
 				831300362A91674D00424511 /* SceneDelegate.swift */,
 				831300382A91674D00424511 /* ViewController.swift */,
 				8313003A2A91674D00424511 /* Main.storyboard */,
-				831300B92A92B3F900424511 /* RealmManager */,
+				831300662A9167CE00424511 /* Screens */,
+				831300702A9167CE00424511 /* Views */,
+				831300742A9167CF00424511 /* NetworkManager */,
+				831300C12A92B8AC00424511 /* MovieRepository */,
 				8313006D2A9167CE00424511 /* ImageCacheManager */,
 				831300642A9167CE00424511 /* Models */,
-				831300742A9167CF00424511 /* NetworkManager */,
-				831300662A9167CE00424511 /* Screens */,
 				831300772A9167CF00424511 /* Utilities */,
-				831300702A9167CE00424511 /* Views */,
 				8313008D2A9267B000424511 /* Constants */,
 				8313003D2A91674E00424511 /* Assets.xcassets */,
 				8313003F2A91674E00424511 /* LaunchScreen.storyboard */,
@@ -202,8 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				831300682A9167CE00424511 /* ScreenNameViewController.swift */,
-				831300692A9167CE00424511 /* MovieViewModel.swift */,
 				8313006A2A9167CE00424511 /* MoviesListViewModel.swift */,
+				831300692A9167CE00424511 /* MovieViewModel.swift */,
 			);
 			path = "Screen Name";
 			sourceTree = "<group>";
@@ -286,18 +286,18 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		831300B92A92B3F900424511 /* RealmManager */ = {
+		831300B92A92B3F900424511 /* MoviesRealmManager */ = {
 			isa = PBXGroup;
 			children = (
 				831300BA2A92B40700424511 /* MoviesRealmManager.swift */,
-				831300C12A92B8AC00424511 /* MovieRepository */,
 			);
-			path = RealmManager;
+			path = MoviesRealmManager;
 			sourceTree = "<group>";
 		};
 		831300C12A92B8AC00424511 /* MovieRepository */ = {
 			isa = PBXGroup;
 			children = (
+				831300B92A92B3F900424511 /* MoviesRealmManager */,
 				831300C22A92B8C000424511 /* MovieRepository.swift */,
 			);
 			path = MovieRepository;

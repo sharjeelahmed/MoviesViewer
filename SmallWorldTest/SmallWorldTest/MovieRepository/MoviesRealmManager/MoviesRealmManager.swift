@@ -20,12 +20,6 @@ class MoviesRealmManager: MoviesRealmManagerProtocol {
 
 
     private init() {
-        
-        /*do {
-            realm = try Realm()
-        } catch {
-            fatalError("Failed to initialize Realm: \(error)")
-        }*/
     }
 
     func storeMovies(_ movies: [Movie]) {
