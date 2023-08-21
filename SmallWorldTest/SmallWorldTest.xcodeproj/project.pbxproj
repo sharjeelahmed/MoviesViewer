@@ -13,7 +13,6 @@
 		8313003C2A91674D00424511 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8313003A2A91674D00424511 /* Main.storyboard */; };
 		8313003E2A91674E00424511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8313003D2A91674E00424511 /* Assets.xcassets */; };
 		831300412A91674E00424511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8313003F2A91674E00424511 /* LaunchScreen.storyboard */; };
-		8313004C2A91674E00424511 /* SmallWorldTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313004B2A91674E00424511 /* SmallWorldTestTests.swift */; };
 		831300562A91674E00424511 /* SmallWorldTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831300552A91674E00424511 /* SmallWorldTestUITests.swift */; };
 		831300582A91674E00424511 /* SmallWorldTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831300572A91674E00424511 /* SmallWorldTestUITestsLaunchTests.swift */; };
 		8313007D2A9167CF00424511 /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831300682A9167CE00424511 /* MoviesListViewController.swift */; };
@@ -39,6 +38,8 @@
 		831300CD2A92D03000424511 /* DetailMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831300CC2A92D03000424511 /* DetailMovieViewController.swift */; };
 		831300CF2A92D04100424511 /* DetailMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831300CE2A92D04100424511 /* DetailMovieViewModel.swift */; };
 		831300D12A92D09300424511 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831300D02A92D09300424511 /* MovieDetailsViewModel.swift */; };
+		8392B6072A93A760007C9973 /* MovieListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392B6062A93A760007C9973 /* MovieListViewModelTest.swift */; };
+		8392B60A2A93A785007C9973 /* MockMoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8392B6092A93A785007C9973 /* MockMoviesRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +69,6 @@
 		831300402A91674E00424511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		831300422A91674E00424511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		831300472A91674E00424511 /* SmallWorldTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmallWorldTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8313004B2A91674E00424511 /* SmallWorldTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWorldTestTests.swift; sourceTree = "<group>"; };
 		831300512A91674E00424511 /* SmallWorldTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmallWorldTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		831300552A91674E00424511 /* SmallWorldTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWorldTestUITests.swift; sourceTree = "<group>"; };
 		831300572A91674E00424511 /* SmallWorldTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWorldTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -92,6 +92,8 @@
 		831300CC2A92D03000424511 /* DetailMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewController.swift; sourceTree = "<group>"; };
 		831300CE2A92D04100424511 /* DetailMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMovieViewModel.swift; sourceTree = "<group>"; };
 		831300D02A92D09300424511 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
+		8392B6062A93A760007C9973 /* MovieListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModelTest.swift; sourceTree = "<group>"; };
+		8392B6092A93A785007C9973 /* MockMoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMoviesRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +169,8 @@
 		8313004A2A91674E00424511 /* SmallWorldTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				8313004B2A91674E00424511 /* SmallWorldTestTests.swift */,
+				8392B6082A93A776007C9973 /* MockClasses */,
+				8392B6062A93A760007C9973 /* MovieListViewModelTest.swift */,
 			);
 			path = SmallWorldTestTests;
 			sourceTree = "<group>";
@@ -319,6 +322,14 @@
 				831300D02A92D09300424511 /* MovieDetailsViewModel.swift */,
 			);
 			path = MovieDetail;
+			sourceTree = "<group>";
+		};
+		8392B6082A93A776007C9973 /* MockClasses */ = {
+			isa = PBXGroup;
+			children = (
+				8392B6092A93A785007C9973 /* MockMoviesRepository.swift */,
+			);
+			path = MockClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -491,7 +502,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8313004C2A91674E00424511 /* SmallWorldTestTests.swift in Sources */,
+				8392B60A2A93A785007C9973 /* MockMoviesRepository.swift in Sources */,
+				8392B6072A93A760007C9973 /* MovieListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
