@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ScreenNameViewController: UIViewController {
+class MoviesListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var viewModel: MoviesListViewModel!
     
@@ -47,7 +47,7 @@ class ScreenNameViewController: UIViewController {
     }
 }
 
-extension ScreenNameViewController: UITableViewDataSource, UITableViewDelegate {
+extension MoviesListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.array.count
     }

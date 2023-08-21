@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-66" y="4"/>
         </scene>
-        <!--Screen Name View Controller-->
+        <!--Movies List View Controller-->
         <scene sceneID="fnD-6U-RxU">
             <objects>
-                <viewController storyboardIdentifier="ScreenNameViewController" id="20E-Bf-XSb" customClass="ScreenNameViewController" customModule="SmallWorldTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScreenNameViewController" id="20E-Bf-XSb" customClass="MoviesListViewController" customModule="SmallWorldTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qbm-CN-2wk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

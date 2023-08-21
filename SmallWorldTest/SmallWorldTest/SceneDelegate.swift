@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func launchInitialVC(){
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
-        guard let vc = storyBoard.instantiateViewController(withIdentifier: "ScreenNameViewController") as? ScreenNameViewController else {
+        guard let vc = storyBoard.instantiateViewController(withIdentifier: "ScreenNameViewController") as? MoviesListViewController else {
             return
         }
         DispatchQueue.main.async {

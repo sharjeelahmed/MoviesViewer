@@ -16,7 +16,7 @@
 		8313004C2A91674E00424511 /* SmallWorldTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313004B2A91674E00424511 /* SmallWorldTestTests.swift */; };
 		831300562A91674E00424511 /* SmallWorldTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831300552A91674E00424511 /* SmallWorldTestUITests.swift */; };
 		831300582A91674E00424511 /* SmallWorldTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831300572A91674E00424511 /* SmallWorldTestUITestsLaunchTests.swift */; };
-		8313007D2A9167CF00424511 /* ScreenNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831300682A9167CE00424511 /* ScreenNameViewController.swift */; };
+		8313007D2A9167CF00424511 /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831300682A9167CE00424511 /* MoviesListViewController.swift */; };
 		8313007E2A9167CF00424511 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831300692A9167CE00424511 /* MovieViewModel.swift */; };
 		8313007F2A9167CF00424511 /* MoviesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313006A2A9167CE00424511 /* MoviesListViewModel.swift */; };
 		831300802A9167CF00424511 /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313006C2A9167CE00424511 /* APIEndPoints.swift */; };
@@ -72,7 +72,7 @@
 		831300512A91674E00424511 /* SmallWorldTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmallWorldTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		831300552A91674E00424511 /* SmallWorldTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWorldTestUITests.swift; sourceTree = "<group>"; };
 		831300572A91674E00424511 /* SmallWorldTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallWorldTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		831300682A9167CE00424511 /* ScreenNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenNameViewController.swift; sourceTree = "<group>"; };
+		831300682A9167CE00424511 /* MoviesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
 		831300692A9167CE00424511 /* MovieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		8313006A2A9167CE00424511 /* MoviesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesListViewModel.swift; sourceTree = "<group>"; };
 		8313006C2A9167CE00424511 /* APIEndPoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
@@ -192,20 +192,20 @@
 		831300662A9167CE00424511 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				831300672A9167CE00424511 /* MovieListViewController */,
 				831300CB2A92CDA200424511 /* MovieDetail */,
-				831300672A9167CE00424511 /* Screen Name */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		831300672A9167CE00424511 /* Screen Name */ = {
+		831300672A9167CE00424511 /* MovieListViewController */ = {
 			isa = PBXGroup;
 			children = (
-				831300682A9167CE00424511 /* ScreenNameViewController.swift */,
+				831300682A9167CE00424511 /* MoviesListViewController.swift */,
 				8313006A2A9167CE00424511 /* MoviesListViewModel.swift */,
 				831300692A9167CE00424511 /* MovieViewModel.swift */,
 			);
-			path = "Screen Name";
+			path = MovieListViewController;
 			sourceTree = "<group>";
 		};
 		8313006B2A9167CE00424511 /* ApiEndPoints */ = {
@@ -483,7 +483,7 @@
 				831300CD2A92D03000424511 /* DetailMovieViewController.swift in Sources */,
 				831300822A9167CF00424511 /* ImageCacheManagerProtocol.swift in Sources */,
 				831300862A9167CF00424511 /* NetworkManagerProtocol.swift in Sources */,
-				8313007D2A9167CF00424511 /* ScreenNameViewController.swift in Sources */,
+				8313007D2A9167CF00424511 /* MoviesListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
