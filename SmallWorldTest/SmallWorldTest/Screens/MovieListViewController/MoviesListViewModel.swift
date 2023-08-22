@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol MoviesListViewModelProtocol {
-    func getData()
+    func getMovies()
     func filterMoviesByName(_ name: String)
     func clearFilter()
 }
@@ -38,7 +38,7 @@ class MoviesListViewModel: MoviesListViewModelProtocol {
         onLoadData?(filteredArray)
     }
     
-    func getData() {
+    func getMovies() {
         Task {
             do {
                 let movies = try await moviesRepository.fetchMovies()

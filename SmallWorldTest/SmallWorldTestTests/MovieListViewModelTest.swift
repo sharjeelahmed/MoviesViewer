@@ -34,7 +34,7 @@ class MoviesListViewModelTests: XCTestCase {
 
         let expectation = XCTestExpectation(description: "Fetch movies success expectation")
 
-        viewModel.getData()
+        viewModel.getMovies()
         DispatchQueue.global().asyncAfter(deadline: .now() + 1.0) {
             expectation.fulfill()
         }
@@ -53,7 +53,7 @@ class MoviesListViewModelTests: XCTestCase {
 
         let expectation = XCTestExpectation(description: "Fetch movies failure expectation")
 
-        viewModel.getData()
+        viewModel.getMovies()
         DispatchQueue.global().asyncAfter(deadline: .now() + 1.0) {
             expectation.fulfill()
         }

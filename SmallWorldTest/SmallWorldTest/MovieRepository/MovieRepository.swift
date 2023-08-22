@@ -45,7 +45,9 @@ class MoviesRepository: MoviesRepositoryProtocol {
             return try await fetchMovieDetailFromRealm(movieID: movieID)
         }
     }
-    
+}
+
+extension MoviesRepository {
     private func fetchMoviesFromAPI() async throws -> [Movie] {
         let url = APIEndpoint.popularMoviesList.url
         let response: MovieApiResponse = try await networkManager.request(url: URLRequest(url: url))
@@ -70,11 +72,9 @@ class MoviesRepository: MoviesRepositoryProtocol {
     
     private func storeMoviesInRealm(_ movies: [Movie]) async throws {
         try await  movieRealmManager.storeMovies(movies)
-        //try await MoviesRealmManager.shared.storeMovies(movies)
     }
     
     private func storeMovieDetailsInRealm(_ movie: Movie) async throws {
         try await  movieRealmManager.storeMovieDetails(movie)
-        //try await MoviesRealmManager.shared.storeMovieDetails(movie)
     }
 }

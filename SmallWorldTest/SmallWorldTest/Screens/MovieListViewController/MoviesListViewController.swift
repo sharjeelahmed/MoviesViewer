@@ -21,7 +21,7 @@ class MoviesListViewController: UIViewController {
         addSearchBar()
         
         DispatchQueue.main.async {
-            self.viewModel.getData()
+            self.viewModel.getMovies()
         }
         
         viewModel.onLoadData = { [weak self] list in
