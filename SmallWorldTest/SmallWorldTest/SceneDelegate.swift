@@ -26,6 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let viewModel: MoviesListViewModel = .moviesListViewModelBuilder
             vc.viewModel = viewModel
             let navCon = UINavigationController.init(rootViewController: vc)
+            navCon.navigationBar.isHidden = false
             self.window?.rootViewController = navCon
         }
        

@@ -10,11 +10,15 @@ import UIKit
 
 protocol MoviesListViewModelProtocol {
     func getData()
+    func filterMoviesByName(_ name: String)
+    func clearFilter()
 }
 class MoviesListViewModel: MoviesListViewModelProtocol {
     var moviesRepository: MoviesRepositoryProtocol
     
     var array: [MovieViewModelProtocol] = []
+    var filteredArray: [MovieViewModelProtocol] = []
+
     var onLoadData: (([MovieViewModelProtocol]) -> Void)?
     var navigateToDetail: ((DetailMovieViewModel) -> Void)?
     
@@ -25,8 +29,13 @@ class MoviesListViewModel: MoviesListViewModelProtocol {
     }
     
     func navigateToMovieDetails(selectedIndex: Int) {
-        let detailVc = DetailMovieViewModel(moviesRepository: moviesRepository, movieID: array[selectedIndex].id)
+        let detailVc = DetailMovieViewModel(moviesRepository: moviesRepository, movieID: filteredArray[selectedIndex].id)
         navigateToDetail?(detailVc)
+    }
+    
+    func filterMoviesByName(_ name: String) {
+        filteredArray = array.filter { $0.name.lowercased().contains(name.lowercased()) }
+        onLoadData?(filteredArray)
     }
     
     func getData() {
@@ -37,7 +46,9 @@ class MoviesListViewModel: MoviesListViewModelProtocol {
                     print("No movies Found")
                     return
                 }
+                
                 array = movies.map { MovieViewModel($0) }
+                filteredArray = array
                 onLoadData?(array)
             } catch {
                 if let networkError = error as? NetworkError {
@@ -50,6 +61,10 @@ class MoviesListViewModel: MoviesListViewModelProtocol {
                 }
             }
         }
+    }
+    
+    func clearFilter() {
+        filteredArray = array
     }
 }
 
