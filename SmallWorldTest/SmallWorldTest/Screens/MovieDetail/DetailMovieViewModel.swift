@@ -14,11 +14,11 @@ protocol DetailMovieViewModelProtocol {
 
 class DetailMovieViewModel: DetailMovieViewModelProtocol {
     var movieDetails: MovieDetailsViewModelProtocol?
-    var moviesRepository: MoviesRepository
+    var moviesRepository: MoviesRepositoryProtocol
     var movieID: Int
     var onLoadData: ((MovieDetailsViewModelProtocol) -> Void)?
 
-    init(moviesRepository: MoviesRepository, movieID: Int ) {
+    init(moviesRepository: MoviesRepositoryProtocol, movieID: Int ) {
         self.moviesRepository = moviesRepository
         self.movieID = movieID
     }

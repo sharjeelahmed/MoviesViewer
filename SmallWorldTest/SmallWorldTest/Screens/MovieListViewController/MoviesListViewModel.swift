@@ -12,7 +12,7 @@ protocol MoviesListViewModelProtocol {
     func getData()
 }
 class MoviesListViewModel: MoviesListViewModelProtocol {
-    var moviesRepository: MoviesRepository
+    var moviesRepository: MoviesRepositoryProtocol
     
     var array: [MovieViewModelProtocol] = []
     var onLoadData: (([MovieViewModelProtocol]) -> Void)?
@@ -20,7 +20,7 @@ class MoviesListViewModel: MoviesListViewModelProtocol {
     
     var onApiRequestFailure: ((AlertItem) -> Void)?
     
-    init (moviesRepository: MoviesRepository) {
+    init (moviesRepository: MoviesRepositoryProtocol) {
         self.moviesRepository = moviesRepository
     }
     

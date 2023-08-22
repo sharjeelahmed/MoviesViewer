@@ -6,18 +6,17 @@
 //
 
 import XCTest
-
+import RealmSwift
 @testable import SmallWorldTest
 
 class MoviesListViewModelTests: XCTestCase {
     
-    var mockMoviesRepository: MockMoviesRepository!
+    var mockMoviesRepository: MoviesRepositoryProtocol!
     var viewModel: MoviesListViewModel!
-
+    var isSuccessTest: Bool = true
+    
     override func setUp() {
         super.setUp()
-        mockMoviesRepository = MockMoviesRepository()
-        viewModel = MoviesListViewModel(moviesRepository: mockMoviesRepository)
     }
     
     override func tearDown() {
@@ -27,28 +26,40 @@ class MoviesListViewModelTests: XCTestCase {
     }
 
     func testFetchMoviesSuccess() {
-        // Given
-        let movie = Movie(id: 123, title: "Test Movie", originalTitle: "Test Original Movie")
-        mockMoviesRepository.fetchMoviesReturnValue = [movie]
+        isSuccessTest = true // Set to true for success test
         
-        // When
+        // Set up the mock repository and view model here
+        mockMoviesRepository = MockMoviesRepository_Success()
+        viewModel = MoviesListViewModel(moviesRepository: mockMoviesRepository)
+
+        let expectation = XCTestExpectation(description: "Fetch movies success expectation")
+
         viewModel.getData()
-        
-        // Then
-        XCTAssertEqual(viewModel.array.count, 1)
-        XCTAssertEqual(viewModel.array[0].name, "Test Movie")
+        DispatchQueue.global().asyncAfter(deadline: .now() + 1.0) {
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 5.0)
+
+        XCTAssertEqual(viewModel.array.count, 2)
+        XCTAssertEqual(viewModel.array[0].name, "Sample Movie 1")
     }
     
     func testFetchMoviesFailure() {
-        // Given
-        mockMoviesRepository.fetchMoviesError = NetworkError.invalidResponse
+        isSuccessTest = false // Set to false for failure test
         
-        // When
+        // Set up the mock repository and view model here
+        mockMoviesRepository = MockMoviesRepository_Faiure()
+        viewModel = MoviesListViewModel(moviesRepository: mockMoviesRepository)
+
+        let expectation = XCTestExpectation(description: "Fetch movies failure expectation")
+
         viewModel.getData()
-        
-        // Then
-        XCTAssertEqual(viewModel.array.count, 0)
-        // You can also assert that the onApiRequestFailure closure was called
+        DispatchQueue.global().asyncAfter(deadline: .now() + 1.0) {
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 5.0)
+
+        XCTAssertEqual(viewModel.array.count, 0) // No movies should be loaded
     }
     
     // Add more test cases for other scenarios

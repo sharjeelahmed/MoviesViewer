@@ -1,0 +1,54 @@
+[
+  {
+    "id": 123,
+    "original_title": "Sample Original Movie 1",
+    "title": "Sample Movie 1",
+    "overview": "This is a sample movie 1.",
+    "vote_average": 7.5,
+    "vote_count": 1000,
+    "popularity": 150.0,
+    "release_date": "2023-08-20",
+    "backdrop_path": "/sample_backdrop_1.jpg",
+    "poster_path": "/sample_poster_1.jpg",
+    "tagline": "Sample Tagline 1",
+    "status": "Released",
+    "production_countries": [
+      {
+        "iso3166_1": "US",
+        "name": "United States"
+      }
+    ],
+    "genres": [
+      {
+        "id": 1,
+        "name": "Action"
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "original_title": "Sample Original Movie 2",
+    "title": "Sample Movie 2",
+    "overview": "This is a sample movie 2.",
+    "vote_average": 8.0,
+    "vote_count": 1500,
+    "popularity": 180.0,
+    "release_date": "2023-08-21",
+    "backdrop_path": "/sample_backdrop_2.jpg",
+    "poster_path": "/sample_poster_2.jpg",
+    "tagline": "Sample Tagline 2",
+    "status": "Released",
+    "production_countries": [
+      {
+        "iso3166_1": "UK",
+        "name": "United Kingdom"
+      }
+    ],
+    "genres": [
+      {
+        "id": 2,
+        "name": "Adventure"
+      }
+    ]
+  }
+]
